@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actionkey
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:hint="test3"  
+  android:label="test4"
+>
+</actionkey>

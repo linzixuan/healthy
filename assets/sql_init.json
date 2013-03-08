@@ -1,0 +1,89 @@
+{tables:[
+	{name:
+		"table_educational",
+	 sqls:[
+	 	"insert into table_educational (fd_id, fd_name) values (1, '小学')",
+	 	"insert into table_educational (fd_id, fd_name) values (2, '初中')",
+	 	"insert into table_educational (fd_id, fd_name) values (3, '高中')",
+	 	"insert into table_educational (fd_id, fd_name) values (4, '中专')",
+	 	"insert into table_educational (fd_id, fd_name) values (5, '大专')",
+	 	"insert into table_educational (fd_id, fd_name) values (6, '本科')",
+	 	"insert into table_educational (fd_id, fd_name) values (7, '硕士')",
+	 	"insert into table_educational (fd_id, fd_name) values (8, '博士')"
+	 	]
+	 },
+	{name:
+		"table_titles",
+	 sqls:[
+	 	"insert into table_titles (fd_id, fd_name) values (1, '技术员')",
+	 	"insert into table_titles (fd_id, fd_name) values (2, '助理级')",
+	 	"insert into table_titles (fd_id, fd_name) values (3, '中级')",
+	 	"insert into table_titles (fd_id, fd_name) values (4, '副高级')",
+	 	"insert into table_titles (fd_id, fd_name) values (5, '正高级')"
+	 	]
+	 },
+	{name:
+		"table_department",
+	 sqls:[
+	 	"insert into table_department (fd_id, fd_name) values (1, '传染病科')",
+	 	"insert into table_department (fd_id, fd_name) values (2, '血管内科')",
+	 	"insert into table_department (fd_id, fd_name) values (3, '呼吸内科')",
+	 	"insert into table_department (fd_id, fd_name) values (4, '消化内科')",
+	 	"insert into table_department (fd_id, fd_name) values (5, '血液内科')",
+	 	"insert into table_department (fd_id, fd_name) values (6, '泌尿内科')",
+	 	"insert into table_department (fd_id, fd_name) values (7, '内分泌科')",
+	 	"insert into table_department (fd_id, fd_name) values (8, '神经内科')",
+	 	"insert into table_department (fd_id, fd_name) values (9, '妇科')",
+	 	"insert into table_department (fd_id, fd_name) values (10, '眼科')",
+	 	"insert into table_department (fd_id, fd_name) values (11, '耳鼻喉科')",
+	 	"insert into table_department (fd_id, fd_name) values (12, '口腔科')",
+	 	"insert into table_department (fd_id, fd_name) values (13, '皮肤科')",
+	 	"insert into table_department (fd_id, fd_name) values (14, '精神病科')",
+	 	"insert into table_department (fd_id, fd_name) values (15, '放疗科')",
+	 	"insert into table_department (fd_id, fd_name) values (16, '普通外科')",
+	 	"insert into table_department (fd_id, fd_name) values (17, '胸外科')",
+	 	"insert into table_department (fd_id, fd_name) values (18, '心血管外科')",
+	 	"insert into table_department (fd_id, fd_name) values (19, '泌尿外科')",
+	 	"insert into table_department (fd_id, fd_name) values (20, '神经外科')",
+	 	"insert into table_department (fd_id, fd_name) values (21, '骨科')",
+	 	"insert into table_department (fd_id, fd_name) values (22, '烧伤科')"
+	 	]
+	 },
+	{name:
+		"table_disease_category",
+	 sqls:[
+	 	"insert into table_disease_category (fd_id, fd_name) values (1, '脑梗塞')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (2, '脑出血')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (3, '上呼吸道感染')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (4, '慢性支气管炎')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (5, '肺炎')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (6, '哮喘')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (7, '支气管扩张症')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (8, '肺结核')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (9, '心肌梗塞心绞痛')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (10, '高血压')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (11, '心律失常')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (12, '风湿热')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (13, '冠心病')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (14, '胃肠炎')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (15, '胃炎胃溃疡')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (16, '十二指肠溃疡')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (17, '乙型肝炎')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (18, '肝硬化')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (19, '胆囊结石')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (20, '胆囊炎')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (21, '肝内胆管结石')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (22, '慢性胰腺炎')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (23, '胆汁郁积性黄疸')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (24, '门脉高压症')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (25, '食管静脉曲张')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (26, '贫血')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (27, '原发性肾病')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (28, '病综合征')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (29, '肾小球肾炎')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (30, '糖尿病')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (31, '甲亢')",
+	 	"insert into table_disease_category (fd_id, fd_name) values (32, '甲状腺炎')"
+	 	]
+	 }
+]}

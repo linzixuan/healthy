@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/backgroud"
+    >
+<LinearLayout  
+	android:background="@drawable/home_header_bg2" 
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content"
+	android:id="@+id/layout">
+    <Button 
+    	android:background="@drawable/common_titlebar_back_btn_normal" 
+    	android:layout_marginLeft="8.0dip" 
+    	android:text="返回" 
+    	android:textSize="17.0dip"
+    	android:textColor="#FFFFFF"
+    	android:layout_gravity="center"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:id="@+id/btnBack" />
+  </LinearLayout>
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_middle">
+        <TextView
+       	 	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:textColor="@color/black"
+        	android:layout_centerVertical="true"
+        	android:textSize="16dp"
+        	android:text="我的备份文件"/>       	
+   	</RelativeLayout>
+   	<LinearLayout
+   		android:layout_width="fill_parent"
+  		android:layout_height="250dp">
+         <ListView 
+			android:id="@+id/backupListView"
+			android:layout_height="wrap_content"
+			android:fadingEdge="none"
+			android:layout_width="fill_parent"/>
+    </LinearLayout>
+	<LinearLayout
+ 		android:layout_width="fill_parent" 
+ 		android:layout_marginTop="9dp"
+ 		android:gravity="center_horizontal"
+ 		android:layout_height="wrap_content">
+ 		<Button   	
+    		android:id="@+id/backup"
+    		android:layout_width="wrap_content"
+     		android:layout_height="wrap_content"
+     		android:background="@drawable/add_button_normal"
+     		android:textSize="16dp"
+    		android:text="备份数据"/>
+	</LinearLayout>
+  
+        <TextView
+       	 	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="9dp"
+        	android:textColor="@color/black"
+        	android:layout_centerVertical="true"
+        	android:text="备份目录：sd卡/dohealthy/"/>
+        	       	  
+</LinearLayout>
+

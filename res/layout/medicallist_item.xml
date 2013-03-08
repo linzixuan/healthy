@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content"
+	android:background="@drawable/common_list">
+	<LinearLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:layout_weight="1">
+		<TextView
+			android:id="@+id/patientName"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+			android:textColor="@color/black"
+			android:gravity="center"
+			android:singleLine="true"/>			
+	</LinearLayout>
+	<LinearLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:layout_weight="1">
+		<TextView
+			android:id="@+id/disease"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+			android:textColor="@color/black"
+			android:gravity="center"
+			android:singleLine="true"/>			
+	</LinearLayout>
+	<LinearLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:layout_weight="1">
+		<TextView
+			android:id="@+id/date"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+			android:textColor="@color/black"
+			android:gravity="center"
+			android:singleLine="true"/>			
+	</LinearLayout>
+</LinearLayout>

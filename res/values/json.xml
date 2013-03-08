@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 默认页面 -->
+    <string name="json_init_fileName">sql_init.json</string>
+    <string name="json_init_tableTag">tables</string>
+    <string name="json_init_tableName">name</string>
+    <string name="json_init_sqlTag">sqls</string>
+    <string name="json_update_fileName">sql_update.json</string>
+    <string name="json_update_versionTag">versions</string>
+    <string name="json_update_version">version</string>
+    <string name="json_update_sqlTag">sqls</string>
+</resources>

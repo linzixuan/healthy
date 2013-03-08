@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.zerodo.activity"
+      android:versionCode="11"
+      android:versionName="2.1">
+	<!-- 允许程序接入网络 -->  
+	<uses-permission android:name="android.permission.INTERNET" /> 
+	<!-- 允许程序调用通话功能 -->  
+	<uses-permission android:name="android.permission.CALL_PHONE"/>
+	<!-- 允许程序使用SD卡 -->  
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<!-- 允许程序使用WIFI -->  
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <application  android:icon="@drawable/icon" android:label="@string/app_name" android:debuggable="true">
+        <activity android:name=".WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> 
+         <activity android:name=".MainActivity"></activity>
+        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".SettingActivity"></activity>
+        <activity android:name=".BaseDataActivity"></activity>
+        <activity android:name=".DiseaseCategoryActivity"></activity>
+        <activity android:name=".DiseaseCategoryAddActivity"></activity>
+        <activity android:name=".DepartmentActivity"></activity>
+        <activity android:name=".DepartmentAddActivity"></activity>
+        <activity android:name=".EducationalActivity"></activity>
+        <activity android:name=".EducationalAddActivity"></activity>
+        <activity android:name=".TitlesActivity"></activity>
+        <activity android:name=".TitlesAddActivity"></activity>
+        <activity android:name=".DiseaseFeaturesActivity"></activity>
+        <activity android:name=".DiseaseFeaturesAddActivity"></activity>
+        <activity android:name=".DoctorAdviceActivity"></activity>
+        <activity android:name=".DoctorAdviceAddActivity"></activity>
+        <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".UserInfoActivity"></activity>
+        <activity android:name=".PatientActivity">
+        	<intent-filter>
+        		<action android:name="android.intent.action.SEARCH" />
+        	</intent-filter>
+        	<meta-data android:name="android.app.searchable" android:resource="@xml/searchable" />
+        </activity>
+        <activity android:name=".PatientAddActivity"></activity>
+        <activity android:name=".MedicalCaseActivity"></activity>
+        <activity android:name=".MedicalCaseAddActivity"></activity>
+        <activity android:name=".FavorActivity"></activity>
+        <activity android:name=".FeaturesInputActivity"></activity>
+        <activity android:name=".FeaturesSelectActivity"></activity>
+        <activity android:name=".AdviceInputActivity"></activity>
+        <activity android:name=".AdviceSelectActivity"></activity>
+		<activity android:name=".BigImageActivity" > </activity>
+		<activity android:name=".RegistActivity"></activity>
+		<activity android:name=".RegistedActivity"></activity>
+		<activity android:name=".DataSafeActivity"></activity>
+		<activity android:name=".DataRecycleActivity"></activity>
+		<activity android:name=".DiseaseSelectActivity"></activity>
+		<activity android:name=".ImportContactsActivity"></activity>
+		<activity android:name=".PhoneInfoActivity"></activity>
+		
+    </application>
+	 <uses-sdk android:minSdkVersion="6" />
+
+
+</manifest> 

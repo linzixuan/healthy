@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation = "horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="40px"
+  android:background="@drawable/common_list">
+	<LinearLayout
+		android:layout_width="fill_parent"
+	 	android:layout_height="fill_parent"
+	 	android:layout_marginLeft="5dp"
+	  	android:orientation="vertical"
+	  	android:layout_weight="1">
+		<LinearLayout
+	  		android:layout_width="fill_parent"
+	  		android:layout_height="wrap_content"
+	  		android:layout_marginTop="5dp">
+	  		<LinearLayout
+	  			android:layout_width="fill_parent"
+	  			android:layout_height="wrap_content"
+	  			android:layout_weight="2">
+		 		<TextView
+		  			android:layout_width = "wrap_content"
+		  			android:layout_height = "wrap_content"
+		  			android:textColor="@color/black"
+		  			android:text="姓名:"/> 
+		  		<TextView
+		  			android:id="@+id/patientName"
+		  			android:layout_width = "wrap_content"
+		  			android:layout_height = "wrap_content"
+		  			android:textColor="@color/black"
+		  			android:singleLine="true"/> 
+	  		</LinearLayout>
+	  		<LinearLayout
+	  			android:layout_width="fill_parent"
+	  			android:layout_height="wrap_content"
+	  			android:layout_weight="1">
+		  		<TextView
+		  			android:layout_width = "wrap_content"
+		  			android:layout_height = "wrap_content"
+		  			android:textColor="@color/black"
+		  			android:text="联系电话:"/> 
+		  		<TextView
+		  			android:id="@+id/patientPhone"
+		  			android:layout_width = "wrap_content"
+		  			android:layout_height = "wrap_content"
+		  			android:textColor="@color/black"
+		  			android:singleLine="true"/> 
+	  		</LinearLayout>
+		</LinearLayout>   
+		<LinearLayout
+	  		android:layout_width="fill_parent"
+	  		android:layout_height="wrap_content">
+	  		<LinearLayout
+	  			android:layout_width="fill_parent"
+	  			android:layout_height="wrap_content"
+	  			android:layout_marginBottom="5dp"
+	  			android:layout_weight="2">
+		 		<TextView
+		  			android:layout_width = "wrap_content"
+		  			android:layout_height = "wrap_content"
+		  			android:textColor="@color/black"
+		  			android:text="年龄:"/> 
+		  		<TextView
+		  			android:id="@+id/patientAge"
+		  			android:layout_width = "wrap_content"
+		  			android:layout_height = "wrap_content"
+		  			android:textColor="@color/black"/> 
+		  	</LinearLayout>
+	  		<LinearLayout
+	  			android:layout_width="fill_parent"
+	  			android:layout_height="wrap_content"
+	  			android:layout_weight="1">
+		  		<TextView
+		  			android:layout_width = "wrap_content"
+		  			android:layout_height = "wrap_content"
+		  			android:textColor="@color/black"
+		  			android:text="共有"/> 		  		
+		  		<TextView
+		  			android:id="@+id/medicalCount"
+		  			android:layout_width = "wrap_content"
+		  			android:layout_height = "wrap_content"
+		  			android:textColor="@color/red"/> 
+		  		<TextView
+		  			android:layout_width = "wrap_content"
+		  			android:layout_height = "wrap_content"
+		  			android:textColor="@color/black"
+		  			android:text="个病历；"/> 
+		  		<TextView
+		  			android:id="@+id/haveRemark"
+		  			android:layout_width = "wrap_content"
+		  			android:layout_height = "wrap_content"/> 
+		  	</LinearLayout>
+	  	</LinearLayout>
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="fill_parent"
+	 	android:layout_height="fill_parent"
+	 	android:layout_weight="6"
+	 	android:paddingLeft="10dp">
+	  	<ImageView
+	  		android:id="@+id/expandImage"
+	  		android:layout_width="wrap_content"
+	  		android:layout_height="wrap_content"  
+	  		android:layout_gravity="center">
+	  	</ImageView>	
+  	</LinearLayout>
+</LinearLayout>

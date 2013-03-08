@@ -1,0 +1,33 @@
+{versions:[
+	{version:
+		"4",
+	 sqls:[
+	 	"alter table 'table_medical_case' add 'fd_disease_id' INTEGER"
+	 	]
+	 },
+	{version:
+		"5",
+	 sqls:[
+	 	"alter table 'table_medical_case' add 'fd_features_ids' TEXT(500)",
+	 	"alter table 'table_medical_case' add 'fd_advice_ids' TEXT(500)"
+	 	]
+	 },
+	{version:
+		"6",
+	 sqls:[
+	 	"alter table 'table_patient_info' add 'fd_update_time' TEXT(20)"
+	 	]
+	 },
+	{version:
+		"7",
+	 sqls:[
+	 	"create table table_attachment(fd_id  INTEGER primary key autoincrement,fd_name TEXT (50),fd_main_id INTEGER ,fd_model_name TEXT (50))"
+	 	]
+	 },
+	{version:
+		"8",
+	 sqls:[
+	 	"alter table 'table_attachment' add 'fd_file_path' TEXT(100)"
+	 	]
+	 }
+]}

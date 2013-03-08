@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">捷度健康簿</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="main_home">首页</string>
+    <string name="main_patient">患者</string>
+    <string name="main_medical">病历</string>
+    <string name="main_favor">收藏</string>
+    <string name="main_setting">设置</string>
+    <string name="about_url">网址:&lt;a style=\"color:blue;\" href=\"\"&gt;http://www.zerodo.cn&lt;/a&gt; </string>
+    <string name="regist_url">网址:&lt;a style=\"color:blue;\" href=\"\"&gt;http://stzerodo.taobao.com&lt;/a&gt; </string>
+    <string name="about_tel">&lt;a style=\"color:blue;\" href=\"\"&gt;0754-88691122&lt;/a&gt; </string>
+    <item name="expand_view_tagId" type="id"/>
+    <item name="expand_view_tagIndex" type="index"/>
+</resources>
