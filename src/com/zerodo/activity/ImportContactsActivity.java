@@ -1,6 +1,7 @@
 package com.zerodo.activity;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import android.app.AlertDialog;
@@ -25,6 +26,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -32,6 +34,7 @@ import com.zerodo.adapter.ExpandableAdapter;
 import com.zerodo.adapter.SelectListApapter;
 import com.zerodo.base.common.CommonActivity;
 import com.zerodo.base.common.CommonModel;
+import com.zerodo.base.util.PingyinComparator;
 import com.zerodo.base.util.StringUtil;
 import com.zerodo.db.dao.PatientInfoDao;
 import com.zerodo.db.model.PatientInfo;
@@ -46,7 +49,9 @@ public class ImportContactsActivity extends CommonActivity implements
 	private Button btnBack;
 	private Button btnSave;
 	private Button searchBtn;
+	private Button btnAll;
 	private AutoCompleteTextView autoCompleteTextView;
+	private boolean selectAll=false;
 	
 	/**获取库Phon表字段**/  
     private static final String[] PHONES_PROJECTION = new String[] {  
@@ -71,8 +76,10 @@ public class ImportContactsActivity extends CommonActivity implements
 		contactsList.setFastScrollEnabled(true);
 		btnBack = (Button) findViewById(R.id.btnBack);
 		btnSave = (Button) findViewById(R.id.btnSave);
+		btnAll=(Button) findViewById(R.id.btnAll);
 		btnBack.setOnTouchListener(this);
 		btnSave.setOnTouchListener(this);
+		btnAll.setOnTouchListener(this);
 		autoCompleteTextView=(AutoCompleteTextView) findViewById(R.id.searchText);
 		searchBtn=(Button) findViewById(R.id.searchBtn);
 		searchBtn.setOnClickListener(this);
@@ -99,6 +106,7 @@ public class ImportContactsActivity extends CommonActivity implements
 			datas.add(model);
 		}
 		cursor.close();
+		datas=sortContacts(datas);
 		contactApapter=new SelectListApapter(this,datas);
 		contactsList.setAdapter(contactApapter);
 	}
@@ -123,6 +131,44 @@ public class ImportContactsActivity extends CommonActivity implements
 			case MotionEvent.ACTION_UP:
 				btnSave.setBackgroundResource(R.drawable.common_titlebar_common_btn_normal);
 				dialog();
+				break;
+			}
+			break;
+		case R.id.btnAll:
+			switch (event.getAction()) {
+			case MotionEvent.ACTION_DOWN:
+				btnAll.setBackgroundResource(R.drawable.common_titlebar_common_btn_selected);
+				break;
+			case MotionEvent.ACTION_UP:
+				btnAll.setBackgroundResource(R.drawable.common_titlebar_common_btn_normal);
+				if(!selectAll){
+					for(int i=0,size=datas.size();i<size;i++){
+						if (!contactsSelectList.contains(datas.get(i))) {
+							contactsSelectList.add((CommonModel) datas.get(i));
+							SelectListApapter.getIsSelected().put(i,true);
+						}	
+					}	
+					for(int index=0,size=contactsList.getChildCount();index<size;index++){
+						LinearLayout layout=(LinearLayout) contactsList.getChildAt(index);
+						CheckBox checkBox = (CheckBox) layout.findViewById(R.id.commonCheckBox);
+						checkBox.setChecked(true);
+					}
+					selectAll=true;
+					btnAll.setText("清空");
+				}else{
+					for(int i=0,size=datas.size();i<size;i++){
+						SelectListApapter.getIsSelected().put(i,false);
+					}
+					contactsSelectList=new ArrayList<CommonModel>();
+					for(int index=0,size=contactsList.getChildCount();index<size;index++){
+						LinearLayout layout=(LinearLayout) contactsList.getChildAt(index);
+						CheckBox checkBox = (CheckBox) layout.findViewById(R.id.commonCheckBox);
+						checkBox.setChecked(false);
+					}
+					selectAll=false;
+					btnAll.setText("全选");
+				}
+
 				break;
 			}
 			break;
@@ -151,6 +197,7 @@ public class ImportContactsActivity extends CommonActivity implements
 				datas.add(model);
 			}
 			cursor.close();
+			datas=sortContacts(datas);
 			contactApapter.setDatas(datas);
 			contactApapter.notifyDataSetChanged();
 			break;
@@ -189,6 +236,12 @@ public class ImportContactsActivity extends CommonActivity implements
 		 }); 
 		 builder.create().show(); 
 	 } 
+	
+	private List sortContacts(List datas){
+		PingyinComparator comparator=new PingyinComparator();
+		Collections.sort(datas,comparator);
+		return datas;
+	}
 	
 	class SaveTask extends AsyncTask<String, Void, Integer>{
     	private AlertDialog.Builder builder;

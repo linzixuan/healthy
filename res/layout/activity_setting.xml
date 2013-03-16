@@ -142,28 +142,6 @@
                      android:layout_marginLeft="160dp"
                      android:layout_gravity="center_vertical"
 			/>
-              </LinearLayout> 
- 			 <LinearLayout
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:background="@drawable/setting_middle"
-              android:id="@+id/layoutPhoneInfo">
-            <TextView
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_marginLeft="30dp"
-                     android:layout_gravity="center_vertical"
-                     android:textSize="15dp"
-                     android:textColor="#5a3a08"
-                     android:text="手机信息"
-			/>
-            <ImageView
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:src="@drawable/common_left"
-                     android:layout_marginLeft="160dp"
-                     android:layout_gravity="center_vertical"
-			/>
               </LinearLayout>       
         <LinearLayout
               android:layout_width="wrap_content"

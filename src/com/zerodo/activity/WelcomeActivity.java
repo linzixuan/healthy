@@ -80,7 +80,23 @@ public class WelcomeActivity extends CommonActivity {
 		WifiInfo info = (null == wifiMgr ? null : wifiMgr
 				.getConnectionInfo());
 		if (null != info) {
-			mac = info.getMacAddress().replaceAll(":", "");
+			if(info.getMacAddress()==null&& !wifiMgr.isWifiEnabled()){
+				wifiMgr.setWifiEnabled(true);
+				for (int i = 0; i < 10; i++) {
+					WifiInfo _info = wifiMgr.getConnectionInfo();
+					if ( _info.getMacAddress() != null) {
+						mac = _info.getMacAddress().replaceAll(":", "");
+						break;
+					}
+					try {
+						Thread.sleep(500);
+					} catch (InterruptedException e) {
+					}
+				}
+				wifiMgr.setWifiEnabled(false);
+			}else{
+				mac = info.getMacAddress().replaceAll(":", "");
+			}
 		}
 		imei = ((TelephonyManager) getSystemService(TELEPHONY_SERVICE))
 				.getDeviceId();

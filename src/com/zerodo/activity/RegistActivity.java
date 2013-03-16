@@ -135,7 +135,23 @@ public class RegistActivity extends CommonActivity implements OnTouchListener {
 			WifiInfo info = (null == wifiMgr ? null : wifiMgr
 					.getConnectionInfo());
 			if (null != info) {
-				macAddress = info.getMacAddress().replaceAll(":", "");
+				if(info.getMacAddress()==null&& !wifiMgr.isWifiEnabled()){
+					wifiMgr.setWifiEnabled(true);
+					for (int i = 0; i < 10; i++) {
+						WifiInfo _info = wifiMgr.getConnectionInfo();
+						if ( _info.getMacAddress() != null) {
+							macAddress = _info.getMacAddress().replaceAll(":", "");
+							break;
+						}
+						try {
+							Thread.sleep(500);
+						} catch (InterruptedException e) {
+						}
+					}
+					wifiMgr.setWifiEnabled(false);
+				}else{
+					macAddress = info.getMacAddress().replaceAll(":", "");
+				}
 			}
 			iMei = ((TelephonyManager) getSystemService(TELEPHONY_SERVICE))
 					.getDeviceId();

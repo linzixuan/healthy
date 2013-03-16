@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="com.zerodo.activity"
-      android:versionCode="11"
-      android:versionName="2.1">
+      android:versionCode="12"
+      android:versionName="2.2">
 	<!-- 允许程序接入网络 -->  
 	<uses-permission android:name="android.permission.INTERNET" /> 
 	<!-- 允许程序调用通话功能 -->  
@@ -11,6 +11,7 @@
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 	<!-- 允许程序使用WIFI -->  
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> 
 	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
 	<uses-permission android:name="android.permission.READ_CONTACTS"/>
     <application  android:icon="@drawable/icon" android:label="@string/app_name" android:debuggable="true">

@@ -76,7 +76,7 @@ public class SettingActivity extends TabActivity implements OnTouchListener {
 	private LinearLayout layoutAbout;
 	
 	//手机信息
-	private LinearLayout layoutPhoneInfo;
+//	private LinearLayout layoutPhoneInfo;
     private ProgressBar pg;
     
 	@Override
@@ -93,14 +93,14 @@ public class SettingActivity extends TabActivity implements OnTouchListener {
 		layoutRegist=(LinearLayout) findViewById(R.id.layoutRegist);
 		layoutUpdate=(LinearLayout) findViewById(R.id.layoutUpdate);
 		layoutAbout=(LinearLayout) findViewById(R.id.layoutAbout);
-		layoutPhoneInfo=(LinearLayout) findViewById(R.id.layoutPhoneInfo);
+//		layoutPhoneInfo=(LinearLayout) findViewById(R.id.layoutPhoneInfo);
 		layoutUserInfo.setOnClickListener(new MyOnClickListener());
 		layoutCustom.setOnClickListener(new MyOnClickListener());
 		layoutData.setOnClickListener(new MyOnClickListener());
 		layoutRegist.setOnClickListener(new MyOnClickListener());
 		layoutUpdate.setOnClickListener(new MyOnClickListener());
 		layoutAbout.setOnClickListener(new MyOnClickListener());
-		layoutPhoneInfo.setOnClickListener(new MyOnClickListener());
+//		layoutPhoneInfo.setOnClickListener(new MyOnClickListener());
 		pg = (ProgressBar)findViewById(R.id.pg);
 	}
 	
@@ -127,10 +127,10 @@ public class SettingActivity extends TabActivity implements OnTouchListener {
 					it=new Intent(SettingActivity.this, RegistActivity.class);
 				startActivity(it);
 				break;
-			case R.id.layoutPhoneInfo:
-				it=new Intent(SettingActivity.this, PhoneInfoActivity.class);
-				startActivity(it);
-				break;
+//			case R.id.layoutPhoneInfo:
+//				it=new Intent(SettingActivity.this, PhoneInfoActivity.class);
+//				startActivity(it);
+//				break;
 			case R.id.layoutUpdate:
 	 			Log.i(TAG,"开始检测版本");
 	 			try {
